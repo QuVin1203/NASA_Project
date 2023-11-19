@@ -2,6 +2,9 @@ const path=require('path')
 const express=require('express')
 const cors=require('cors')
 const morgan =require('morgan')
+const db=require('../db/db.js')
+
+db.connect()
 
 const planetsRouter=require('./routes/planets/planetsRouter')
 const launchesRouter=require('./routes/launches/launchesRouter')
